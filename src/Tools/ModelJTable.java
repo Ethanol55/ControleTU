@@ -42,8 +42,9 @@ public class ModelJTable extends AbstractTableModel
             lignes[i][0]=unCaptage.getIdCaptage();
             lignes[i][1]=unCaptage.getDescription();
             lignes[i][2]=unCaptage.getIdCaptage();
-            
+            i++;
         }
+        fireTableChanged(null);
 
     }
 }

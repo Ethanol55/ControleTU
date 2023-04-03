@@ -76,10 +76,11 @@ public class Formation
     {
         // A compléter ici
         double montantARembourser = 0;
-        int montantRecu = this.prixFormation*this.lesParticipants.size();
+        int montantRecu = 0;//this.prixFormation*this.lesParticipants.size();
         for (Participant unParticipant:this.lesParticipants) {
             if (unParticipant.isEstPresent()){
                 montantARembourser = montantARembourser+unParticipant.getNbKm()*1.89;
+                montantRecu = montantRecu+this.prixFormation;
             }
         }
         return montantRecu-montantARembourser;
